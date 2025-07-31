@@ -1,11 +1,50 @@
-# React + Vite
+# Plain edu - Financial Education App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+주린이를 위한 금융 교육 및 퀴즈 앱입니다.
 
-Currently, two official plugins are available:
+## 프로젝트 구조
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```
+my-financial-app/
+├── src/                    # Frontend (React + Vite)
+│   ├── components/
+│   ├── hooks/
+│   ├── utils/
+│   └── ...
+├── back/                   # Backend (Node.js + MySQL)
+│   ├── .env.example       # 백엔드 환경설정 예시
+│   ├── .gitignore         # 백엔드 전용 gitignore
+│   └── ...
+└── ...
+```
+
+## 개발 환경 설정
+
+### Frontend
+```bash
+npm install
+npm run dev
+```
+
+### Backend  
+```bash
+cd back
+cp .env.example .env
+# .env 파일에 실제 데이터베이스 정보 입력
+npm install
+npm start
+```
+
+## 데이터베이스
+
+- **Database**: `plaindb` (MySQL)
+- **Tables**: 사용자, 퀴즈, 랭킹 등
+
+## 기술 스택
+
+- **Frontend**: React, Vite, Tailwind CSS
+- **Backend**: Node.js, Express, MySQL2
+- **Database**: MySQL (`plaindb`)
 
 ## Expanding the ESLint configuration
 
